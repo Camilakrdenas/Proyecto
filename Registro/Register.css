@@ -15,7 +15,7 @@ body {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgb(250, 247, 247);
+    background-color: rgba(0, 0, 0, 0.664);
     border: 1px solid #444;
     border-radius: 15px;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);

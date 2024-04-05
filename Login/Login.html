@@ -30,6 +30,31 @@
         <input type="submit" class="btn-1" value="iniciar">
     </form>
     <!-- Archivo JavaScript -->
-    <script src="Login.js"></script>
+    <script>
+        const handleLogin = async (event) => {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData);
+
+      const response = await fetch('/login', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        alert('¡Usuario inició sesión correctamente!');
+        window.location.href = 'login/inicio cliente/index.html'; // Redirigir a la página de dashboard
+      } else {
+        const error = await response.json();
+        alert(error.message);
+      }
+    };
+
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', handleLogin);
+      </script>
 </body>
 </html>
