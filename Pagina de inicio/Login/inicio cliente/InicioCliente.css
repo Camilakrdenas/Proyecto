@@ -1,0 +1,212 @@
+/* Estilo global para el cuerpo del documento */
+body {
+    margin: 0; /* Elimina los márgenes por defecto del navegador */
+    padding: 0; /* Elimina el padding por defecto del navegador */
+    font-family: Arial, sans-serif; /* Define la fuente para el texto */
+    background: linear-gradient(
+        rgba(29,30,35,0.8), /* Color inicial del gradiente */
+        rgba(29,30,35,0.8) /* Color final del gradiente */
+    ),
+    url(imagenes/Princesa\ .jpeg); /* Imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    display: flex; /* Utiliza el modelo de caja flexible para los elementos hijos */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+    min-height: 80vh; /* Define una altura mínima del 80% de la altura de la ventana gráfica */
+    padding: 120px 0 0 0; /* Agrega un padding en la parte superior para evitar que el contenido se superponga con el encabezado */
+}
+
+/* Estilo para el encabezado */
+.header {
+    background: linear-gradient(
+        90deg, /* Dirección del gradiente */
+        rgba(245, 98, 72, 0.699) 0%, /* Color inicial del gradiente */
+        rgba(254, 139, 32, 0.822) 100% /* Color final del gradiente */
+    );
+    position: fixed; /* Fija el encabezado en la parte superior de la página */
+    top: 0; /* Alinea el encabezado con la parte superior */
+    left: 0; /* Alinea el encabezado con el borde izquierdo */
+    width: 100%; /* Hace que el encabezado ocupe todo el ancho de la pantalla */
+    z-index: 100; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+
+/* Estilo para el contenedor principal */
+.container {
+    display: flex; /* Utiliza el modelo de caja flexible */
+    justify-content: space-between; /* Distribuye los elementos hijos con espacio entre ellos */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+    padding: 15px; /* Agrega un padding de 15px alrededor del contenedor */
+    max-width: 1200px; /* Define un ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilo para el logotipo */
+.logo {
+    height: 50px; /* Define la altura del logotipo */
+}
+
+/* Estilo para la imagen del logotipo */
+.logo img {
+    height: 100%; /* Ajusta la imagen para que ocupe toda la altura del contenedor del logotipo */
+}
+
+/* Estilo para la navegación */
+.nav {
+    display: flex; /* Utiliza el modelo de caja flexible */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-links {
+    display: flex; /* Utiliza el modelo de caja flexible */
+    list-style: none; /* Elimina los estilos de lista por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    align-items: center;
+}
+
+/* Estilo para cada elemento de la lista de navegación */
+.nav-links li {
+    margin-right: 20px; /* Agrega un margen a la derecha de cada elemento */
+}
+
+/* Estilo para los enlaces dentro de la navegación */
+.nav-links a {
+    display: block; /* Hace que los enlaces sean elementos de bloque */
+    padding: 10px; /* Agrega un padding de 10px alrededor de cada enlace */
+    color: #fff; /* Define el color del texto como blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: background-color 0.3s ease; /* Agrega una transición suave para el cambio de color de fondo */
+}
+
+/* Estilo para los enlaces de navegación cuando se pasa el cursor por encima */
+.nav-links a:hover {
+    background-color: #fff; /* Cambia el color de fondo a blanco */
+    color: #000000; /* Cambia el color del texto a negro */
+}
+
+/* Botón de menú de hamburguesa */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: rgba(254, 139, 32, 0.822); /* Fondo naranja */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Líneas blancas */
+    margin: 4px 0;
+    transition: 0.3s;
+}
+/* Estilo para el contenido principal */
+.main {
+    padding: 200px 0; /* Agrega un padding de 200px en la parte superior e inferior */
+    text-align: center; /* Centra el texto */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: column; /* Apila los elementos hijos en una columna */
+}
+
+/* Estilo para el título principal */
+.title {
+    display: block; /* Hace que el título sea un elemento de bloque */
+    font-size: 85px; /* Define el tamaño de fuente del título */
+    line-height: 1; /* Define la altura de línea */
+    margin-bottom: 20px; /* Agrega un margen en la parte inferior del título */
+    color: #fff; /* Define el color del texto como blanco */
+    text-shadow: 0 0 2px rgba(254, 139, 32, 0.822), 0 0 2px rgba(254, 139, 32, 0.822), 0 0 2px rgba(254, 139, 32, 0.822), 0 0 2px rgba(254, 139, 32, 0.822); /* Agrega un efecto de sombra al texto */
+    position: absolute; /* Posiciona el título de manera absoluta */
+    top: 40%; /* Coloca el título al 40% de la altura del contenedor */
+    left: 50%; /* Coloca el título al 50% del ancho del contenedor */
+    transform: translate(-50%, -50%); /* Centra el título horizontal y verticalmente */
+}
+
+/* Estilo para el subtítulo */
+.subtitle {
+    font-size: 24px; /* Define el tamaño de fuente del subtítulo */
+    margin-bottom: 40px; /* Agrega un margen en la parte inferior del subtítulo */
+    color: #fff; /* Define el color del texto como blanco */
+    text-shadow: 0 0 1px rgba(254, 139, 32, 0.822), 0 0 1px rgba(254, 139, 32, 0.822), 0 0 1px rgba(254, 139, 32, 0.822), 0 0 1px rgba(254, 139, 32, 0.822); /* Agrega un efecto de sombra al texto */
+    position: absolute; /* Posiciona el subtítulo de manera absoluta */
+    top: 60%; /* Coloca el subtítulo al 60% de la altura del contenedor */
+    left: 50%; /* Coloca el subtítulo al 50% del ancho del contenedor */
+    transform: translate(-50%, -50%); /* Centra el subtítulo horizontal y verticalmente */
+}
+
+/* Estilos responsivos para pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px; /* Ajusta el padding del encabezado */
+    }
+
+    .header .container {
+        flex-direction: column; /* Apila los elementos hijos en una columna */
+    }
+
+    .header .logo {
+        margin-bottom: 20px; /* Agrega un margen en la parte inferior del logotipo */
+    }
+
+    .header .nav {
+        margin-top: 20px; /* Agrega un margen en la parte superior de la navegación */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .nav-links {
+        display: none; /* Utiliza el modelo de caja flexible */
+        flex-direction: column; /* Apila los elementos hijos en una columna */
+        align-items: flex-start; /* Alinea los elementos hijos a la izquierda */
+    }
+
+    .header .nav-links li {
+        margin-right: 0; /* Elimina el margen a la derecha de los elementos */
+        margin-bottom: 10px; /* Agrega un margen en la parte inferior de cada elemento */
+    }
+
+    .header .nav-links a {
+        padding: 10px; /* Ajusta el padding de los enlaces */
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav-links li {
+        margin-bottom: 5px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+}

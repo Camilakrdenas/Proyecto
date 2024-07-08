@@ -1,13 +1,23 @@
+/* Estilos globales para el cuerpo del documento */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    
+    background: linear-gradient(
+            rgba(29, 30, 35, 0.8),
+            rgba(29, 30, 35, 0.8)
+        ),
+        url(imagenes/Princesa\ .jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 120px 0 0 0;
 }
 
-
-
-.header{
+/* Estilos del encabezado */
+.header {
     background: linear-gradient(
         90deg,
         rgba(245, 98, 72, 0.699) 0%,
@@ -18,21 +28,9 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
-    
 }
-body{
-    background: linear-gradient(
-        rgba(29,30,35,0.8),
-        rgba(29,30,35,0.8)
-    ),
-    url(imagenes/Princesa\ .jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    min-height: 80vh;
-    padding: 120px 0 0 0;
-}
+
+/* Estilos del contenedor principal */
 .container {
     display: flex;
     justify-content: space-between;
@@ -42,6 +40,7 @@ body{
     margin: 0 auto;
 }
 
+/* Estilos del logotipo */
 .logo {
     height: 50px;
 }
@@ -50,16 +49,19 @@ body{
     height: 100%;
 }
 
+/* Estilos de la barra de navegación */
 .nav {
     display: flex;
     align-items: center;
 }
 
+/* Estilos de los enlaces de navegación */
 .nav-links {
-    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links li {
@@ -79,13 +81,34 @@ body{
     color: #000000;
 }
 
+/* Botón de menú de hamburguesa */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: rgba(254, 139, 32, 0.822); /* Fondo naranja */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Líneas blancas */
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Estilos del contenido principal */
 .main {
     padding: 200px 0;
     text-align: center;
     display: flex;
     flex-direction: column;
+
 }
 
+/* Estilos del título */
 .title {
     display: block;
     font-size: 85px;
@@ -99,10 +122,11 @@ body{
     transform: translate(-50%, -50%);
 }
 
+/* Estilos del subtítulo */
 .subtitle {
     font-size: 24px;
     margin-bottom: 40px;
-    color:#fff;
+    color: #fff;
     text-shadow: 0 0 1px rgba(254, 139, 32, 0.822), 0 0 1px rgba(254, 139, 32, 0.822), 0 0 1px rgba(254, 139, 32, 0.822), 0 0 1px rgba(254, 139, 32, 0.822);
     position: absolute;
     top: 60%;
@@ -110,37 +134,76 @@ body{
     transform: translate(-50%, -50%);
 }
 
-
-
-@media (max-width:768px) {
+/* Estilos de medios consultados para pantallas más pequeñas */
+@media (max-width: 768px) {
     .header {
         padding: 15px 20px;
     }
 
-    .header .container {
+    .container {
         flex-direction: column;
     }
 
-    .header .logo {
+    .logo {
         margin-bottom: 20px;
     }
 
-    .header .nav {
+    .nav {
         margin-top: 20px;
-    }
-
-    .header .nav-links {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .header .nav-links li {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
         margin-right: 0;
         margin-bottom: 10px;
     }
 
-    .header .nav-links a {
+    .nav-links a {
         padding: 10px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav-links li {
+        margin-bottom: 5px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 16px;
     }
 }

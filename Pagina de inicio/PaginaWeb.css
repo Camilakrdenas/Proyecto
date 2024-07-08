@@ -1,6 +1,7 @@
+/*Importar fuentes desde Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
 
-
+/* Estilos generales para todos los elementos */
 *{
     margin: 0;
     padding: 0;
@@ -9,18 +10,23 @@
     list-style: none;
 }
 
+/* Estilo para el cuerpo del documento */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Asegura que las imagenes no excedan el ancho del contenedor */
 img{
     max-width: 100%;
 }
+
+/* Configura el contenedor principal para centrarse y tener un ancho máximo de 1200 pixeles */
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Define los estilos para el encabezado, incluyendo un fondo con degradado y una imagen*/
 .header{
     background: linear-gradient(
         rgba(29,30,35,0.8),
@@ -36,6 +42,7 @@ img{
     padding: 80px 0 0 0;
 }
 
+/* Estilo para el menú, posicionandolo y centrando los elementos*/
 .menu{
     position: absolute;
     top: 0;
@@ -46,15 +53,18 @@ img{
     justify-content: space-between;
 }
 
+/* Ajusta la altura máxima del logo*/
 .logo img {
     max-height: 50px; 
 }
 
+/* Define los estilos de los elementos de la lista del menú */
 .menu .navbar ul li {
     position: relative;
     float: left;
 }
 
+/* Define los estilos para los enlaces en la barra de navegación */
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
@@ -63,23 +73,28 @@ img{
     font-weight: 600;
 }
 
+/* Cambia el color del texto del enlace en la barra de navegacion al pasar el ratón*/
 .menu .navbar ul li a:hover{
   color: rgb(187, 121, 22);
 }
 
+/*Oculta el menú por defecto*/
 #menu{
 display: none;
 }
 
+/*Define el tamaño del icono del menú*/
 .menu-icono{
     width: 25px;
 }
 
+/*Hace que el label del menú sea interactivo y lo oculta por defecto*/
 .menu label{
     cursor: pointer;
     display: none;
 }
 
+/*Define los estilos para el texto del encabezado*/
 .header-txt{
     text-align: center;
     padding: 0  200px;
@@ -87,6 +102,7 @@ display: none;
     flex-direction: column;
 }
 
+/*Define los estilos del titulo principal en el encabezado*/
 .header-txt h1 {
     font-size: 85px;
     line-height: 1;
@@ -95,12 +111,14 @@ display: none;
     margin-bottom: 20;
 }
 
+/*Define los estilos generales para los párrafos*/
 p{
     font-size: 17px;
     color: #D4D4D4;
     margin-bottom: 35px;
 }
 
+/*Define los estilos del botón principal*/
 .btn-1{
     display: inline-block;
     padding: 11px 35px;
@@ -114,21 +132,25 @@ p{
     border-radius: 10px;
 }
 
+/*Define los estilos de la sección 'about' */
 .about{
     padding: 100px 0;
     background-color: #24272e; 
 }
 
+/*Establece un diseño de flex para el contenido de la sección 'about'*/
 .about-content{
     display: flex;
     align-items: center;
 }
 
+/*Define los estilos del span en la sección 'about'*/
 .about-txt{
     flex-basis: 50%;
     padding-right: 35px;
 }
 
+/*Define los estilos del span en la sección 'about'*/
 span{
     font-size: 14px;
     text-transform: uppercase;
@@ -136,6 +158,7 @@ span{
 
 }
 
+/*Define los estilos del encabezado h2*/
 h2{
     font-size: 35px;
     color: #FFFFFF;
@@ -143,32 +166,38 @@ h2{
     line-height: 1;
 }
 
+/*Define los estilos del separador horizontal*/
 hr {
     border: 1px solid rgb(187, 121, 22);
     width: 10%;
     margin-bottom: 30px;
 }
 
+/*Define los estilos de la imagen de la sección 'about'*/
 .about-img{
     flex-basis: 50%;
 }
 
+/*Ajusta el borde de las imagenes en la sección 'about'*/
 .about-img img{
     border-radius: 15px;
 }
 
+/*Define los estilos de la sección 'testimonial'*/
 .testimonial{
     padding: 100px 0;
     background-color: #191a1f;
     text-align: center;
 }
 
+/*Establece un diseño de flex para el contenido de la sección 'testimonial'*/
 .testimonial-content{
     display: flex;
     justify-content: space-between;
     margin-top: 35px;
 }
 
+/*Define los estilos individuales de cada testimonial*/
 .testimonial-1{
     flex-basis: calc(50% - 25px);
     background-color: #24272e;
@@ -176,17 +205,20 @@ hr {
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
+/*Define los estilos del encabezado en cada testimonial*/
 .testimonial-1 h4{
     color: #FFFFFF;
     font-size: 15px;
     margin-bottom: 15px;
 }
 
+/*Define los estilos de los párrafos en cada testimonial*/
 .testimonial-1 p{
     font-size: 15px;
     margin-bottom: 10px;
 }
 
+/*Define los estilos de las imágenes de las caras en los testimonial*/
 .face{
     width: 70px;
     height: 70px;
@@ -195,10 +227,12 @@ hr {
     margin-bottom: 15px;
 }
 
+/*Define los estilos de las estrellas de calififcación en los testimonial*/
 .stars{
     width: 100px;   
 }
 
+/*Define los estilos de la sección 'plans'*/
 .plans{
     padding: 100px 0;
     display: flex;
@@ -207,10 +241,12 @@ hr {
     background-color: #24272e;
 }
 
+/*Ajusta el ancho del separador horizontal en la sección 'plans'*/
 .plans hr {
     width: 5%;
 }
 
+/*Establece un diseño de flex para el contenido de la sección 'plans'*/
 .plans-content{
     display: flex;
     justify-content: space-between;
@@ -218,6 +254,7 @@ hr {
     margin-top: 25px;
 }
 
+/*Define los estilos individuales de cada plan*/
 .plan-1{
     flex-basis: calc(33.3% - 20px);
     border: 1px solid #51515179;
@@ -226,12 +263,14 @@ hr {
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
+/*Define los estilos del span en cada plan*/
 .plan-1 span{
     font-size: 40px;
     font-weight: 800;
     color: #FFFFFF;
 }
 
+/*Define los estilos del encabezado h3 en cada plan*/
 .plan-1 h3{
     padding: 8px;
     font-size: 25px;
@@ -244,18 +283,22 @@ hr {
     );
 }
 
+/*Define los estilos de los párrafos en cada plan*/
 .plan-1 p{
     margin-bottom: 20px;
 }
 
+/*Define los estilos de la seccion 'information'*/
 .information{
     background-color: #191a1f;    
 }
 
+/*Establece un diseño de flex para el contenido de la sección 'information'*/
 .information-content{
     display: flex;
 }
 
+/*Define los estilos del texto en la seccion 'information'*/
 .information-text{
     flex-basis: 50%;
     max-width: 500px;
@@ -263,20 +306,24 @@ hr {
     padding: 80px 0 0 0;
 }
 
+/*Define los estilos de la imagen en la sección 'information'*/
 .information-img{
     flex-basis: 50%;
 }
 
+/*Ajusta la altura de las imagenes en la sección 'information'*/
 .information-img img{
     height: 100%;
 }
 
+/*Define los estilos de la sección 'services'*/
 .services{
     margin: 50px 0;
     display: flex;
     align-items: center;
 }
 
+/*Define los estilos de los encabezados h3 en la sección 'services'*/
 .services h3 {
     font-size: 17px;
     color: #FFFFFF;
@@ -284,41 +331,49 @@ hr {
     margin-left: 15px;
 }
 
+/*Ajusta el tamaño de las imagenes en la sección 'services'*/
 .services img{
     width: 100px;
 }
 
+/*Define los estilos de la sección 'blog'*/
 .blog{
     padding: 100px 0;
     text-align: center;
     background-color: #24272e;
 }
 
+/*Establece un diseño de flex para el contenido de la sección 'blog'*/
 .blog-content{
     display: flex;
     justify-content: space-between;
     margin-top: 35px;
 }
 
+/*Define los estilos individuales de cada entrada de blog*/
 .blog-1{
     flex-basis: calc(33.3% - 25px);
     background-color: #191a1f;
 }
 
+/*Ajusta el margen inferior de las imagenes en cada entrada de blog*/
 .blog-1 img{
     margin-bottom: 15px;
 }
 
+/*Define los estilos del texto en cada entrada de blog*/
 .blog-txt{
     padding: 20px;
 }
 
+/*Define los estilos de los encabezados h3 en cada entrada de blog*/
 .blog-txt h3{
     color: #FFFFFF;
     font-size: 18px;
     margin: 15px 0;
 }
 
+/*Define los estilos de la sección 'Contact'*/
 .contact{
     padding: 100px 0;
     background: linear-gradient(
@@ -331,19 +386,24 @@ hr {
     background-size: cover;
 }
 
+/*Establece la alineación del texto en la sección 'Contact'*/
 .contact-content{
     text-align: center;
 }
 
+/*Define los estilos de la sección 'footer'*/
 .footer{
     padding: 100px 0;
     background-color: #191a1f;
 }
+
+/*Establece un diseño de flex para el contenido de la sección 'footer'*/
 .footer-content{
     display: flex;
     justify-content: space-between;
 }
 
+/*Define los estilos de los encabezados h3 en la sección de enlaces del pie de página*/
 .link h3{
     font-size: 17px;
     color: #FFFFFF;
@@ -351,6 +411,7 @@ hr {
     text-transform: uppercase;
 }
 
+/*Define los estilos de los enlaces en la sección de enlaces del pie de página*/
 .link a{
     font-size: 17px;
     color: #D4D4D4;
@@ -358,14 +419,15 @@ hr {
     margin: 10px;
 }
 
+/*Cambia el color del texto delenlace al pasar el raton en la sección de enlaces del pie de página*/
 .link a:hover{
     color: #F56349;
 }
 
-
+/*Define los estilos para pantallas con un ancho máximo de 991 pixeles*/
 @media(max-width:991px){
     .menu{
-        padding: 20px;
+        padding: 20px 10px;
     }
     .menu label {
         display: initial;
@@ -385,6 +447,7 @@ hr {
         color: #191a1f;
     }
 
+    /*Muestra el menú cuando el checkbox está seleccionado*/
     #menu:checked ~ .navbar{
         display: initial;
     }

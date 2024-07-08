@@ -1,49 +1,54 @@
 /* Establecer márgenes y almohadillas predeterminadas en 0 para todos los elementos */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Definir estilo de cuerpo */
-body{
+body {
     font-family: Helvetica Neue, sans-serif;
     display: flex;
-    align-items: center;/* Centrar los elementos verticalmente */
-    justify-content: center;/* Centrar los elementos horizontalmente */
-    height: 100vh;/* Establecer el alto al 100% del viewport vertical */
+    align-items: center; /* Centrar los elementos verticalmente */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    height: 100vh; /* Establecer el alto al 100% del viewport vertical */
     background-image: url(imagenes/Patos.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 20px; /* Asegurar que haya algo de espacio en los lados en pantallas pequeñas */
 }
+
 /* Estilos de formulario */
-form{
-    padding: 50px;/* Agregar almohadillas a los lados del formulario */
+form {
+    padding: 50px; /* Agregar almohadillas a los lados del formulario */
     display: flex;
     flex-direction: column;
     width: 400px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-    background-color: rgba(0,0,0,0.5);
-
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 /* Estilos de título */
 h2 {
-    text-align: center;/* Estilos de título */
+    text-align: center; /* Estilos de título */
     font-size: 30px;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     margin-bottom: 25px;
 }
+
 /* Estilos de etiquetas */
 label, p {
     font-size: 17px;
     color: #ffffff;
     margin-bottom: 10px;
 }
+
 /* Estilos de campo de entrada */
-input{
-    padding: 17px 11px;/* Agregar almohadilla dentro del campo */
+input {
+    padding: 17px 11px; /* Agregar almohadilla dentro del campo */
     border: 1px solid #F56349;
     border-radius: 25px;
     margin-bottom: 25px;
@@ -52,12 +57,13 @@ input{
     color: #F56349;
     font-size: 17px;
 }
+
 /* Estilos del botón */
-.btn-1{
+.btn-1 {
     background: linear-gradient(
         90deg,
-        rgba(245,99,72,1) 0%,
-        rgba(254,140,32,1) 100%
+        rgba(245, 99, 72, 1) 0%,
+        rgba(254, 140, 32, 1) 100%
     );
     font-size: 15px;
     color: #FFFFFF;
@@ -65,55 +71,98 @@ input{
     cursor: pointer;
     margin-top: 10px;
 }
+
 /* Estilos de botón al pasar el cursor */
-.btn-1:hover{
+.btn-1:hover {
     background: linear-gradient(
         90deg,
         rgb(250, 131, 110) 0%,
         rgb(245, 158, 76) 100%
     );
 }
+
 /* Estilos de recordarme */
-.texto{
+.texto {
     display: flex;
     justify-content: space-between;
     color: #FFFFFF;
     font-size: 17px;
     width: 100%;
 }
-.Registro{
+
+.Registro {
     color: #ffffff;
     text-decoration: underline;
     font-size: 17px;
     margin-right: 10%;
 }
+
 /* Estilos de enlace de olvidar contraseña al pasar el cursor */
 .Registro:hover {
     color: #F56349;
     text-decoration: none;
     cursor: pointer;
 }
+
 /* Estilos de enlace de olvidar contraseña */
 .forgot-password {
     color: #ffffff;
     text-decoration: underline;
     font-size: 17px;
 }
+
 /* Estilos de enlace de olvidar contraseña al pasar el cursor */
 .forgot-password:hover {
     color: #F56349;
     text-decoration: none;
     cursor: pointer;
 }
+
 /* Estilos adaptables para vistas de menos de 991 píxeles de ancho */
-@media(max-width:991px){
-    body{
-        padding: 30px;
-    }
-    form{
+@media (max-width: 991px) {
+    form {
         width: 100%;
     }
-    .remember{
+    .remember {
         flex-direction: column;
+    }
+}
+
+/* Estilos adaptables para vistas de menos de 768 píxeles de ancho */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    form {
+        padding: 40px 20px;
+    }
+    input {
+        padding: 15px 10px;
+    }
+}
+
+/* Estilos adaptables para vistas de menos de 576 píxeles de ancho */
+@media (max-width: 576px) {
+    form {
+        padding: 30px 15px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    label, p {
+        font-size: 15px;
+    }
+    input {
+        padding: 13px 9px;
+        font-size: 15px;
+    }
+    .btn-1 {
+        font-size: 14px;
+    }
+    .texto {
+        font-size: 15px;
+    }
+    .Registro, .forgot-password {
+        font-size: 15px;
     }
 }

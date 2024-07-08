@@ -1,103 +1,92 @@
-
 body {
     font-family: Helvetica Neue, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url(imagenes/Patos.jpeg);
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    margin: 0;
+    height: 100vh;
 }
 
 .container {
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 350px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.664);
     border: 1px solid #444;
     border-radius: 15px;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
     text-align: center;
+    font-size: 14px;
+}
+
+@media (min-width: 401px) {
+    .container {
+        width: 70%;
+        max-width: 600px;
+        padding: 30px;
+        font-size: 16px;
+    }
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
 
 label {
-    display: inline-block;
-    width: 160px;
+    width: 130px;
     text-align: right;
     margin-right: 10px;
-    vertical-align: top;
     color: #fff;
+    font-size: 14px;
 }
 
-input[type="text"], input[type="email"], input[type="contrasena"], select {
+input[type="text"], input[type="email"], input[type="password"], select {
     flex: 1;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #F56349;
     border-radius: 25px;
     box-sizing: border-box;
-    background-color: #242424;;
+    background-color: #242424;
     color: #ffffff;
-}
-
-select {
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 12px;
-    padding-right: 30px;
-    color:#fff;
-}
-select option{
-    white-space: pre;
+    font-size: 14px;
 }
 
 input[type="submit"] {
-    background: linear-gradient(
-        90deg,
-        rgba(245,99,72,1) 0%,
-        rgba(254,140,32,1) 100%
-    );
-    font-size: 15px;
+    background: linear-gradient(90deg, rgba(245,99,72,1) 0%, rgba(254,140,32,1) 100%);
+    font-size: 14px;
     color: #FFFFFF;
     text-transform: uppercase;
     border: none;
     border-radius: 4px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
     font-weight: bold;
 }
 
 input[type="submit"]:hover {
-    background: linear-gradient(
-        90deg,
-        rgb(250, 131, 110) 0%,
-        rgb(245, 158, 76) 100%
-    );
+    background: linear-gradient(90deg, rgb(250, 131, 110) 0%, rgb(245, 158, 76) 100%);
 }
 
 .orange-title {
-    color:  rgba(254,140,32,1);
-    font-size: 27px;
+    color: rgba(254,140,32,1);
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 991px) {
     .container {
         width: 100%;
-    }
-
-    label {
-        width: 100%;
-        text-align: left;
-        margin-right: 0;
+        padding: 15px;
     }
 
     .form-group {
@@ -105,8 +94,112 @@ input[type="submit"]:hover {
         align-items: flex-start;
     }
 
-    input[type="text"], input[type="email"], input[type="contrasena"], select {
+    label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], select {
         width: 100%;
         margin-bottom: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .orange-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+        max-width: 400px;
+        margin: 10px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.664);
+        border: 1px solid #444;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], select {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .orange-title {
+        font-size: 26px;
+        font-weight: bold;
+        color: rgba(254,140,32,1);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        background-size: cover;
+    }
+}
+

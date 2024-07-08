@@ -1,60 +1,77 @@
 <!DOCTYPE html>
 <html> 
 <head>
+    <!-- Título de la página -->
     <title>Registration Form</title>
+    <!-- Enlace al archivo CSS para estilos -->
     <link rel="stylesheet" type="text/css" href="Register.css">
 </head>
 <body>
+<!-- Contenedor principal -->
 <div class="container">
+    <!-- Formulario de registro -->
     <form id="registerForm">
+        <!-- Título destacado -->
         <h2 class="orange-title">REGISTRATE AHORA</h2>
+        <!-- Campo para nombres y apellidos -->
         <div class="form-group">
             <label for="nombreUsuario">Nombres y Apellidos: </label>
             <input type="text" id="nombreUsuario" name="nombreUsuario">
         </div>
+        <!-- Campo para tipo de identificación -->
         <div class="form-group">
             <label for="tipoId">Tipo de identificación:</label>
             <select id="tipoId" name="tipoId">
             </select>
         </div>
+        <!-- Campo para número de identificación -->
         <div class="form-group">
             <label for="numeroId">Número de identificación:</label>
             <input type="text" id="numeroId" name="numeroId">
         </div>
+        <!-- Campo para tipo de usuario -->
         <div class="form-group">
             <label for="tipoUsuario">Tipo de usuario:</label>
             <select id="tipoUsuario" name="TipoUsuario">
             </select>
         </div>
+        <!-- Campo para teléfono -->
         <div class="form-group">
             <label for="telefono">Teléfono:</label>
             <input type="text" id="telefono" name="telefono">
         </div>
+        <!-- Campo para dirección -->
         <div class="form-group">
             <label for="direccion">Dirección:</label>
             <input type="text" id="direccion" name="direccion">
         </div>
+        <!-- Campo para departamento -->
         <div class="form-group">
             <label for="departamento">Departamento:</label>
             <select id="departamento" name="departamento">
             </select>
         </div>
+        <!-- Campo para ciudad -->
         <div class="form-group">
             <label for="ciudad">Ciudad:</label>
             <select id="ciudad" name="ciudad">
             </select>
         </div>
+        <!-- Campo para correo electrónico -->
         <div class="form-group">
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email">
         </div>
+        <!-- Campo para contraseña -->
         <div class="form-group">
             <label for="contrasena">Contraseña:</label>
-            <input type="contrasena" id="contrasena" name="contrasena">
+            <input type="password" id="contrasena" name="contrasena">
         </div>
+        <!-- Botón de envío del formulario -->
         <input type="submit" value="REGISTRAR" id="Registrarbtn">
     </form>
 </div>
+<!-- Inclusión del archivo JavaScript para la funcionalidad del formulario -->
 <script src="Registro.js"></script>
 </body>
 </html>

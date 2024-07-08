@@ -1,5 +1,41 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const fetchDepartments = async () => {
+/**
+ * Clase para manejar el formulario de registro de usuarios.
+ * @class RegisterFormHandler
+ */
+class RegisterFormHandler {
+    /**
+     * Constructor de la clase RegisterFormHandler.
+     * Inicializa los métodos para obtener y mostrar los departamentos, tipos de usuario y tipos de identificación,
+     * y agrega los escuchadores de eventos necesarios para el formulario.
+     * @memberof RegisterFormHandler
+     */
+    constructor() {
+        // Llama a los métodos para obtener y mostrar los departamentos, tipos de usuario y tipos de identificación
+        this.fetchDepartments();
+        this.fetchTipoUsuarios();
+        this.fetchTiposId();
+
+        // Agrega un evento de cambio al select de departamentos para mostrar las ciudades correspondientes
+        const departamentoSelect = document.getElementById('departamento');
+        departamentoSelect.addEventListener('change', () => {
+            const departmentId = departamentoSelect.value;
+            this.fetchCities(departmentId);
+        });
+
+        // Agrega un evento de envío al formulario de registro
+        document.getElementById('registerForm').addEventListener('submit', (event) => {
+            event.preventDefault(); // Previene el comportamiento predeterminado del formulario
+            this.registrarUsuario(); // Llama al método para enviar los datos del formulario al servidor
+        });
+    }
+
+    
+    /**
+     * Método para obtener y mostrar los departamentos desde el servidor.
+     * Realiza una solicitus fetch para obtener los departamentos y los agrega al select de departamentos.
+     * @memberof RegisterFormHandler
+     */
+    async fetchDepartments() {
         try {
             const response = await fetch('http://localhost:3000/departments');
             if (!response.ok) {
@@ -21,9 +57,16 @@ window.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error fetching departments:', error);
         }
-    };
+    }
 
-    const fetchCities = async (departmentId) => {
+     
+    /**
+     * Método para obtener y mostrar las ciudades del departamento seleccionado desde el servidor.
+     * Realiza una solicitud fetch para obtener las ciudades y las agrega al select de ciudades.
+     * @param {*} departmentId - El ID del departamento seleccionado.
+     * @memberof RegisterFormHandler
+     */
+    async fetchCities(departmentId) {
         try {
             const response = await fetch(`http://localhost:3000/cities/${departmentId}`);
             if (!response.ok) {
@@ -45,9 +88,14 @@ window.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error fetching cities:', error);
         }
-    };
+    }
 
-    const fetchTipoUsuarios = async () => {
+    /**
+     * Método para obtener y mostrar los tipos de usuario desde el servidor.
+     * Realiza una solicitud fetch para obtener los tipos de usuario y los agrega al select de tipos de usuario.
+     * @memberof RegisterFormHandler
+     */
+    async fetchTipoUsuarios() {
         try {
             const response = await fetch('http://localhost:3000/tipousuario');
             if (!response.ok) {
@@ -69,9 +117,14 @@ window.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error fetching tipo usuarios:', error);
         }
-    };
+    }
 
-    const fetchTiposId = async () => {
+    /**
+     * Método para obtener y mostrar los tipos de identificación desde el servidor
+     * Realiza una solicitud fetch para obtener los tipos de identificación y los agrega al select de tipos de identificación.
+     * @memberof RegisterFormHandler
+     */
+    async fetchTiposId() {
         try {
             const response = await fetch('http://localhost:3000/tiposid');
             if (!response.ok) {
@@ -93,23 +146,14 @@ window.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error fetching tipos id:', error);
         }
-    };
+    }
 
-    // Llama a la función para obtener y mostrar los departamentos al cargar la página
-    fetchDepartments();
-
-    // Llama a la función para obtener y mostrar las ciudades del departamento seleccionado
-    const departamentoSelect = document.getElementById('departamento');
-    departamentoSelect.addEventListener('change', () => {
-        const departmentId = departamentoSelect.value;
-        fetchCities(departmentId);
-    });
-
-    // Llama a la función para obtener y mostrar los tipos de usuario
-    fetchTipoUsuarios();
-    fetchTiposId();
-
-    async function registrarUsuario() {
+    /**
+     * Método para enviar los datos del formulario al servidor para registrar un nuevo usuario.
+     * Realiza una solicitud fetch con los datos del formulario y maneja la respuesta del servidor.
+     * @memberof RegisterFormHandler
+     */
+    async registrarUsuario() {
         try {
             // Obtener los valores de los elementos input
             const nombreUsuario = document.getElementById('nombreUsuario').value;
@@ -158,11 +202,9 @@ window.addEventListener('DOMContentLoaded', () => {
             alert('Hubo un error al registrar usuario');
         }
     }
-    
-    // Event listener para el formulario de registro
-    document.getElementById('registerForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
-        registrarUsuario(); // Llamar a la función para enviar los datos del formulario al servidor
-    });
+}
 
+// Crea una instancia de la clase RegisterFormHandler cuando se carga el DOM para iniciar la funcionalidad
+window.addEventListener('DOMContentLoaded', () => {
+    new RegisterFormHandler();
 });
